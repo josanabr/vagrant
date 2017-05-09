@@ -7,6 +7,7 @@ En este repositorio se encuentran algunos ejemplos básicos de Vagrant en difere
 * **multiplemachines** `Vagrantfile` donde se definen varias máquinas virtuales.
 * **shellprovisioning** ejemplo de un ambiente basado en Vagrant que soporta el aprovisionamiento de Apache Web Server.
 * **openmpi** directorio que contiene un número de archivos que permiten tener un ambiente de OpenMPI operacional con un solo nodo de procesamiento. Ejemplo de OpenMPI listo para ejecutarse.
+* **HTCondor** conjunto de archivos para instalar HTCondor en un solo nodo
 
 Cada directorio creará una o varias máquinas virtuales al invocar la ejecución del comando `vagrant up`.
 
