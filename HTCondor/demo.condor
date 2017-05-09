@@ -7,5 +7,6 @@ when_to_transfer_output = ON_EXIT_OR_EVICT
 Executable = /bin/ls
 Universe   = vanilla
 Output     = hostOut.$(Process)
+Log        = hostLog
 Error      = hostErr.$(Process)
 Queue
