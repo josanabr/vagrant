@@ -65,3 +65,7 @@ vagrant up
 ```
 
 Ahora ingrese a la máquina virtual recien creada y valide que en el directorio `/tmp` se crearon los archivos `hola mundo.txt` y `hello world.txt`.
+
+## Mayor información
+
+* [Página oficial Vagrant - Shell Scripts](https://www.vagrantup.com/docs/provisioning/shell.html)
