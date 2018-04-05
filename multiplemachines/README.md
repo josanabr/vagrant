@@ -71,4 +71,4 @@ Defina un conjunto de archivos que le permitan hacer lo siguiente.
 
 ## Mayor información
 
-* [Página oficial Vagrant - Shell Scripts](https://www.vagrantup.com/docs/provisioning/shell.html)
+* [Página oficial Vagrant - Multi-machine](https://www.vagrantup.com/docs/multi-machine/)
