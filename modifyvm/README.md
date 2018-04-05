@@ -14,6 +14,6 @@ Por ejemplo, las siguientes líneas dentro del `Vagrantfile` permiten que la má
 Visite la descripción del subcomando [modifyvm](https://www.virtualbox.org/manual/ch08.html#vboxmanage-modifyvm). 
 Cree un `Vagrantfile` de modo que la nueva máquina creada tenga las siguientes características:
 
-* Tenga 900 MB de memoria RAM
-* Tenga 2 CPUs
+* 900 MB de memoria RAM
+* 2 CPUs
 
