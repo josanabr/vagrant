@@ -22,3 +22,42 @@ Usted deberá crear un *script* que permita aprovisionar una máquina virtual co
   * htop
   * mc
 * Escoja algunos paquetes de los que se indican en la primera respuesta en este [foro](https://askubuntu.com/questions/151440/important-things-to-do-after-installing-ubuntu-server).
+
+## *Bonus*
+
+En algunas ocasiones es necesario pasar argumentos a un *script*. 
+A continuación se presenta un `Vagrantfile` que muestra como ejecutar un *script* que recibe argumentos.
+
+```
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+Vagrant.configure("2") do |config|
+  config.vm.box = "ubuntu/xenial32"
+  config.vm.provision "shell", path: "scriptargs.sh", args: ['hola mundo','hello world']
+end
+```
+
+El *script* que se debe invocar para llevar a cabo la correcta ejecución del `Vagrantfile` anterior es este. **Tenga en cuenta que las siguientes líneas se deben almacenar en un archivo llamado `scriptargs.sh`**.
+
+```
+#!/usr/bin/env bash
+#
+# Este script en bash recibe como argumentos una serie de cadenas y usará cada
+# una de estas cadenas como el nombre de un archivo
+#
+for i in "$@"; do
+  echo "${i}"
+done
+```
+
+Para llevar a cabo entonces la ejecución de la sección de **Bonus** usted debe tener los siguientes archivos:
+
+* `Vagrantfile`
+* `scriptargs.sh`
+
+Con estos archivos usted debe ejecutar entonces el comando
+
+```
+vagrant up
+```
