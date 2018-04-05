@@ -21,7 +21,7 @@ A continuación se da una lista de los directorios que se usarán para el curso 
 
 ## Otros directorios
 
-A continuación una descripción de los directorios:
+A continuación una descripción de otros directorios en este repositorio:
 
 * **basic** muestra un archivo de Vagrant básico.
 * **openmpi** directorio que contiene un número de archivos que permiten tener un ambiente de OpenMPI operacional con un solo nodo de procesamiento. Ejemplo de OpenMPI listo para ejecutarse.
