@@ -8,10 +8,10 @@ En el archivo [script.sh](script.sh) se encuentran las líneas necesarias para l
 
 ## Hágalo usted mismo
 
-Usted deberá crear un *script* que haga lo siguiente:
+Usted deberá crear un *script* que permita aprovisionar una máquina virtual con lo siguiente:
 
 * Crear un usuario con *login* `usuario` y *password* `usuario`. [Aquí](https://askubuntu.com/questions/94060/run-adduser-non-interactively) puede encontrar detalles de como hacerlo.
 * Instalar los siguientes programas
   * htop
   * mc
-* Escoja algunos paquetes de los que se indican en la primera respuesta en este [foro](https://askubuntu.com/questions/151440/important-things-to-do-after-installing-ubuntu-server)
+* Escoja algunos paquetes de los que se indican en la primera respuesta en este [foro](https://askubuntu.com/questions/151440/important-things-to-do-after-installing-ubuntu-server).
