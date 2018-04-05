@@ -8,7 +8,7 @@ En el archivo [script.sh](script.sh) se encuentran las líneas necesarias para l
 
 ## Valídelo usted mismo
 
-* Habrá el *dashboard* de VirtualBox
+* Abra el *dashboard* de VirtualBox
 * Descargue los archivos [Vagrantfile](https://raw.githubusercontent.com/josanabr/vagrant/master/shellprovisioning/Vagrantfile) y el archivo [script.sh](https://raw.githubusercontent.com/josanabr/vagrant/master/shellprovisioning/script.sh).
 * Ubíquese en el directorio donde descargó los archivos.
 * Ejecute el comando `vagrant up`

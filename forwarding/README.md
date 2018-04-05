@@ -15,7 +15,7 @@ Permite hacer *port forwarding* del puerto `8080` del *host* al puerto `80` de l
 
 ## Valídelo usted mismo
 
-* Habrá el *dashboard* de VirtualBox
+* Abra el *dashboard* de VirtualBox
 * Descargue el archivos [Vagrantfile](https://raw.githubusercontent.com/josanabr/vagrant/master/forwarding/Vagrantfile).
 * Ubíquese en el directorio donde descargó el archivo.
 * Ejecute el comando `vagrant up`
