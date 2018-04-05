@@ -9,6 +9,13 @@ Por ejemplo, las siguientes líneas dentro del `Vagrantfile` permiten que la má
   end
 ```
 
+## Valídelo usted mismo
+
+* Habrá el *dashboard* de VirtualBox
+* Descargue el archivo [Vagrantfile](https://raw.githubusercontent.com/josanabr/vagrant/master/modifyvm/Vagrantfile).
+* Ubíquese en el directorio donde descargó el archivo.
+* Ejecute el comando `vagrant up`
+
 ## Hágalo usted mismo
 
 Visite la descripción del subcomando [modifyvm](https://www.virtualbox.org/manual/ch08.html#vboxmanage-modifyvm). 

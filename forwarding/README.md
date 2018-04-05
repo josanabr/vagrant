@@ -13,6 +13,13 @@ La sentencia
 
 Permite hacer *port forwarding* del puerto `8080` del *host* al puerto `80` de la máquina virtual.
 
+## Valídelo usted mismo
+
+* Habrá el *dashboard* de VirtualBox
+* Descargue el archivos [Vagrantfile](https://raw.githubusercontent.com/josanabr/vagrant/master/forwarding/Vagrantfile).
+* Ubíquese en el directorio donde descargó el archivo.
+* Ejecute el comando `vagrant up`
+
 ## Hágalo usted mismo
 
 Revise el directorio de [aprovisionamiento a través de *shell*](../shellprovisioning) y haga las modificaciones que considere conveniente para que se pueda acceder desde el *host* al servidor web que corre en la máquina virtual.

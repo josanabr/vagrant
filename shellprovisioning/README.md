@@ -6,6 +6,13 @@ En nuestro caso particular se hará uso de un *script* en Bash gracias a tener y
 
 En el archivo [script.sh](script.sh) se encuentran las líneas necesarias para llevar a cabo la instalación del servidor web de Apache.
 
+## Valídelo usted mismo
+
+* Habrá el *dashboard* de VirtualBox
+* Descargue los archivos [Vagrantfile](https://raw.githubusercontent.com/josanabr/vagrant/master/shellprovisioning/Vagrantfile) y el archivo [script.sh](https://raw.githubusercontent.com/josanabr/vagrant/master/shellprovisioning/script.sh).
+* Ubíquese en el directorio donde descargó los archivos.
+* Ejecute el comando `vagrant up`
+
 ## Hágalo usted mismo
 
 Usted deberá crear un *script* que permita aprovisionar una máquina virtual con lo siguiente:
