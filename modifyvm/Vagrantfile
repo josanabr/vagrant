@@ -1,8 +1,9 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
 Vagrant.configure("2") do |config|
-  config.vm.box = "ubuntu/trusty32"
+  config.vm.box = "ubuntu/xenial32"
   config.vm.provider :virtualbox do |vb|
     vb.customize [ 'modifyvm', :id, '--name', 'modifyvm' ]
   end
-  config.ssh.private_key_path = "/Users/john/.ssh/insecure_private_key"
-  config.ssh.insert_key = false 
 end
