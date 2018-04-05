@@ -38,7 +38,9 @@ Vagrant.configure("2") do |config|
 end
 ```
 
-El *script* que se debe invocar para llevar a cabo la correcta ejecución del `Vagrantfile` anterior es este. **Tenga en cuenta que las siguientes líneas se deben almacenar en un archivo llamado `scriptargs.sh`**.
+Observe que se ha adicionado un nuevo par en la definición del `config.vm.provision`, `args: ['hola mundo','hello world']`.
+El valor de la clave `args` es un arrreglo y donde cada posición del arreglo representa una cadena. La cadena `hola mundo` será el primer argumento que se le pasa al *script*, la cadena `hello world` es el segundo argumento que se le pasa al *script*.
+El *script* que se debe invocar para llevar a cabo la correcta ejecución del `Vagrantfile` anterior, es este. **Tenga en cuenta que las siguientes líneas se deben almacenar en un archivo llamado `scriptargs.sh`**.
 
 ```
 #!/usr/bin/env bash
@@ -61,3 +63,5 @@ Con estos archivos usted debe ejecutar entonces el comando
 ```
 vagrant up
 ```
+
+Ahora ingrese a la máquina virtual recien creada y valide que en el directorio `/tmp` se crearon los archivos `hola mundo.txt` y `hello world.txt`.
