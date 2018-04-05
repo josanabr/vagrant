@@ -18,7 +18,8 @@ A continuación se da una lista de los directorios que se usarán para el curso 
 * [Compartir directorios](sharedfolder)
 * [*Host-only adapters* o adaptadores de red privadas](privatenetwork)
 
-## Otros directorios
+
+## Otros directorios
 
 A continuación una descripción de los directorios:
 
