@@ -54,13 +54,21 @@ Defina un conjunto de archivos que le permitan hacer lo siguiente.
 * Crear dos máquinas virtuales con direcciones IP 10.11.12.3/24 y 10.11.12.4/24, respectivamente.
 * Una máquina aparecerá en el *dashboard* de VirtualBox como `nodo1` y la otroa como `nodo2`.
 * En la máquina `nodo1` debe tener lo siguiente:
+
   * IP 10.11.12.3/42.
   * El programa `mc` instalado.
   * 600 MB de RAM y un núcleo.
+
 * En la máquina `nodo2` debe tener lo siguiente:
+
   * IP 10.11.12.4/42.
   * El servidor web de Apache.
   * La página web del servidor Apache debe apuntar a una página web que queda en el directorio `${HOME}/html` del equipo anfitrión. **Nota** Usted puede definir la info que quiera vaya en el archivo HTML.
   * 1200 MB de RAM y dos núcleos.
+
 * Validar que se puede hacer una conexión SSH desde el `nodo2` hacia el `nodo1`.
 * Hacer una conexión HTTP desde el `nodo1` hacia el `nodo2` utilizando el aplicativo `wget`.
+
+## Mayor información
+
+* [Página oficial Vagrant - Shell Scripts](https://www.vagrantup.com/docs/provisioning/shell.html)
