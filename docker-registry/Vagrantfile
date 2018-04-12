@@ -4,7 +4,9 @@
 Vagrant.configure("2") do |config|
   config.vm.define "dck1" do |dck|
         dck.vm.provision "docker", images: ["ubuntu"] 
+        dck.vm.provision "shell", path: "shell.sh"
         dck.vm.network "private_network", ip: "10.11.14.10"
+        dck.vm.hostname = "manager"
   	dck.vm.box = "ubuntu/xenial64"
   	dck.vm.provider :virtualbox do |vb|
 		vb.customize [ 'modifyvm', :id, '--memory', '386' ]
@@ -14,12 +16,26 @@ Vagrant.configure("2") do |config|
   end
   config.vm.define "dck2" do |dck|
         dck.vm.provision "docker", images: ["ubuntu"]
+        dck.vm.provision "shell", path: "shell.sh"
         dck.vm.network "private_network", ip: "10.11.14.11"
+        dck.vm.hostname = "node1"
   	dck.vm.box = "ubuntu/xenial64"
   	dck.vm.provider :virtualbox do |vb|
 		vb.customize [ 'modifyvm', :id, '--memory', '386' ]
 		vb.customize [ 'modifyvm', :id, '--cpus', '1' ]
 		vb.customize [ 'modifyvm', :id, '--name', 'dck2' ]
+  	end
+  end
+  config.vm.define "dck3" do |dck|
+        dck.vm.provision "docker", images: ["ubuntu"]
+        dck.vm.provision "shell", path: "shell.sh"
+        dck.vm.network "private_network", ip: "10.11.14.12"
+        dck.vm.hostname = "node2"
+  	dck.vm.box = "ubuntu/xenial64"
+  	dck.vm.provider :virtualbox do |vb|
+		vb.customize [ 'modifyvm', :id, '--memory', '386' ]
+		vb.customize [ 'modifyvm', :id, '--cpus', '1' ]
+		vb.customize [ 'modifyvm', :id, '--name', 'dck3' ]
   	end
   end
 end
