@@ -3,7 +3,7 @@
 
 Vagrant.configure("2") do |config|
   config.vm.define "htcondor" do |htcondor|
-  	htcondor.vm.box = "ubuntu/trusty32"
+  	htcondor.vm.box = "ubuntu/trusty64"
 	htcondor.vm.provision "shell", path: "script.sh"
 	htcondor.vm.network "forwarded_port", guest: 22, host: 2223
   	htcondor.vm.provider :virtualbox do |vb|
