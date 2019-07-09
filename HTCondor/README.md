@@ -14,10 +14,11 @@ Durante el desarrollo de los scripts en este repositorio se usó la versión 2.2
 
 Asumiendo que se ha instalado vagrant, desde una terminal ejecutar los siguientes pasos:
 
-[1] `vagrant up`
-[2] `vagrant ssh`
-[3] `condor_submit docker.condor`
-[4] `cat out.0`
+* `vagrant up`
+* `vagrant ssh`
+* `cd /vagrant`
+* `condor_submit docker.condor`
+* `cat out.0`
 
 ---
 
