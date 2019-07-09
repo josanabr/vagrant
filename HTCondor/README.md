@@ -12,7 +12,8 @@ Durante el desarrollo de los scripts en este repositorio se usó la versión 2.2
 
 ## Pasos para el despliegue Docker + HTCondor (All-In-One)
 
-Asumiendo que se ha instalado vagrant, desde una terminal ejecutar los siguientes pasos:
+Asumiendo que se ha instalado `vagrant`, desde una terminal, ubicar en el directorio donde se encuentren los archivos listados aquí.
+Una vez en el directorio ejecutar los siguientes pasos:
 
 * `vagrant up`
 * `vagrant ssh`
