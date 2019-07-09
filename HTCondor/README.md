@@ -19,4 +19,9 @@ Asumiendo que se ha instalado vagrant, desde una terminal ejecutar los siguiente
 [3] `condor_submit docker.condor`
 [4] `cat out.0`
 
+---
 
+## Autores
+
+Edier Zapata - edalzap@gmail.com
+John Sanabria - john.sanabria@correounivalle.edu.co
