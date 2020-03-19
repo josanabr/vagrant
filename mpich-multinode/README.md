@@ -73,6 +73,12 @@ Modificar el archivo `/etc/sshd_config`:
 * En la línea `PermitRootLogin prohibit-password` cambiar a `PermitRootLogin yes`.
 * En la línea `PasswordAuthentication no` cambiar a `PasswordAuthentication yes`. 
 
+Habiendo hechos los cambios, ejecutar el siguiente comando:
+
+```
+sudo service ssh restart
+```
+
 **Ahora en el nodo maestro ejecutar los siguientes pasos**
 
 ```
