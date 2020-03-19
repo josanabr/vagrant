@@ -1,3 +1,7 @@
+
 172.19.250.100	master	master
+172.19.250.100	master-mpi	master-mpi
 172.19.250.101	node-1	node-1
+172.19.250.101	node-mpi-1	node-mpi-1
 172.19.250.102	node-2	node-2
+172.19.250.102	node-mpi-2	node-mpi-2

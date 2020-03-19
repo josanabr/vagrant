@@ -8,11 +8,21 @@ vagrant up
 
 Finalmente debe ejecutar los siguientes dos pasos.
 
-Un documento detallado de los próximos pasos los puede encontrar en [este documento](https://docs.google.com/document/d/1IgQXv81USdHU4lRUsbXPN017BAPUXdqi5t9BUa6yXF8/edit?usp=sharing).
-
 * [Configuracion NFS](#configuracion-nfs)
 * [Acceso passwordless](#acceso-passwordless)
 * [Probando MPI Cluster](#probando-mpi-cluster)
+
+Un documento detallado de los próximos pasos los puede encontrar en [este documento](https://docs.google.com/document/d/1IgQXv81USdHU4lRUsbXPN017BAPUXdqi5t9BUa6yXF8/edit?usp=sharing).
+
+El levantar las tres máquinas virtuales duró alrededor de **40 minutos** en una máquina con la siguiente configuración:
+
+* Intel Core i7
+* 16 GB en RAM
+
+Software
+
+* Vagrant - 2.2.6
+* VirtualBox - 6.0.14
 
 ## Configuracion NFS
 
