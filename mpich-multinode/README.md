@@ -10,6 +10,9 @@ Finalmente debe ejecutar los siguientes dos pasos.
 
 Un documento detallado de los próximos pasos los puede encontrar en [este documento](https://docs.google.com/document/d/1IgQXv81USdHU4lRUsbXPN017BAPUXdqi5t9BUa6yXF8/edit?usp=sharing).
 
+* [Configuracion NFS](#configuracion-nfs)
+* [Accesso passwordless](#accesso-passwordless)
+
 ## Configuracion NFS
 
 ### Configuracion NFS para el maestro
