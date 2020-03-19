@@ -88,6 +88,46 @@ ssk-keyget -t rsa # a cada pregunta digite ENTER, es decir tres veces ENTER
 Ejecute los siguientes comandos:
 
 ```
-ssh-copy-id -i ~/.ssh/id_rsa.pub vagrant@node-1 # type 'vagrant' as passwd
-ssh-copy-id -i ~/.ssh/id_rsa.pub vagrant@node-2 # type 'vagrant' as passwd
+ssh-copy-id -i ~/.ssh/id_rsa.pub vagrant@node-mpi-1 # type 'vagrant' as passwd
+ssh-copy-id -i ~/.ssh/id_rsa.pub vagrant@node-mpi-2 # type 'vagrant' as passwd
+```
+
+## Probando MPI Cluster
+
+Asuma el programa `mpidemo.c`:
+
+```
+#include <stdio.h>
+
+#include "mpi.h"
+
+int main(){
+ 
+  MPI_Init(NULL, NULL);  
+ 
+  printf("Wonderful Class!\n");
+ 
+  MPI_Finalize();
+
+  return(0);
+}
+```
+
+Compile el programa como sigue:
+
+```
+mpicc mpidemo.c -o /shared/mpidemo
+```
+
+Asuma que usted tiene un archivo llamado `hosts4run` en el directorio donde va a ejecutar este programa con el siguiente contenido:
+
+```
+node-mpi-1
+node-mpi-2
+```
+
+Para ejecutar su programa debe ejecutar la siguiente línea:
+
+```
+mpirun -n 4 -f hosts4run /shared/mpidemo
 ```
