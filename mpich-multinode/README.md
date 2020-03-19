@@ -11,7 +11,7 @@ Finalmente debe ejecutar los siguientes dos pasos.
 Un documento detallado de los próximos pasos los puede encontrar en [este documento](https://docs.google.com/document/d/1IgQXv81USdHU4lRUsbXPN017BAPUXdqi5t9BUa6yXF8/edit?usp=sharing).
 
 * [Configuracion NFS](#configuracion-nfs)
-* [Accesso passwordless](#accesso-passwordless)
+* [Acceso passwordless](#acceso-passwordless)
 
 ## Configuracion NFS
 
@@ -66,10 +66,22 @@ Repetir los comandos anteriores en el `node-2`.
 
 ## Acceso passwordless
 
-Para cada una de las máquinas, `master` `node-1` `node-2`, ejecutar los siguientes pasos.
+En cada una de las máquinas, `master` `node-1` `node-2`, ejecutar el siguiente paso.
 
 Modificar el archivo `/etc/sshd_config`:
 
 * En la línea `PermitRootLogin prohibit-password` cambiar a `PermitRootLogin yes`.
 * En la línea `PasswordAuthentication no` cambiar a `PasswordAuthentication yes`. 
 
+**Ahora en el nodo maestro ejecutar los siguientes pasos**
+
+```
+ssk-keyget -t rsa # a cada pregunta digite ENTER, es decir tres veces ENTER
+```
+
+Ejecute los siguientes comandos:
+
+```
+ssh-copy-id -i ~/.ssh/id_rsa.pub vagrant@node-1
+ssh-copy-id -i ~/.ssh/id_rsa.pub vagrant@node-2
+```
