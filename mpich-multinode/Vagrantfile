@@ -1,0 +1,35 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+N = 2
+
+Vagrant.configure("2") do |config|
+  config.vm.define "master" do |openmpi|
+  	openmpi.vm.box = "ubuntu/xenial64"
+        openmpi.vm.network "private_network", ip: "172.19.250.100"
+	openmpi.vm.provision "shell", path: "script-mpich.sh"
+	openmpi.vm.provision "shell", path: "script-hosts.sh"
+	openmpi.vm.provision "shell", path: "script-nfs-master.sh"
+        openmpi.vm.hostname = "master-mpi"
+  	openmpi.vm.provider :virtualbox do |vb|
+		vb.customize [ 'modifyvm', :id, '--memory', '1024' ]
+		vb.customize [ 'modifyvm', :id, '--cpus', '1' ]
+		vb.customize [ 'modifyvm', :id, '--name', 'master-mpi' ]
+  	end
+  end
+  (1..N).each do |i|
+      config.vm.define "node-#{i}" do |node|
+          node.vm.box = "ubuntu/xenial64"
+          node.vm.network "private_network", ip: "172.19.250.#{i + 100}"
+          node.vm.provision "shell", path: "script-mpich.sh"
+	  node.vm.provision "shell", path: "script-hosts.sh"
+	  node.vm.provision "shell", path: "script-nfs-client.sh"
+          node.vm.hostname = "node-mpi-#{i}"
+       	  node.vm.provider :virtualbox do |vb|
+      		vb.customize [ 'modifyvm', :id, '--memory', '1024' ]
+      		vb.customize [ 'modifyvm', :id, '--cpus', '1' ]
+      		vb.customize [ 'modifyvm', :id, '--name', 'node-mpi.-#{i}' ]
+          end
+      end
+  end
+end
