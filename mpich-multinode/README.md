@@ -12,6 +12,7 @@ Un documento detallado de los próximos pasos los puede encontrar en [este docum
 
 * [Configuracion NFS](#configuracion-nfs)
 * [Acceso passwordless](#acceso-passwordless)
+* [Probando MPI Cluster](#probando-mpi-cluster)
 
 ## Configuracion NFS
 
