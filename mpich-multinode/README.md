@@ -88,6 +88,6 @@ ssk-keyget -t rsa # a cada pregunta digite ENTER, es decir tres veces ENTER
 Ejecute los siguientes comandos:
 
 ```
-ssh-copy-id -i ~/.ssh/id_rsa.pub vagrant@node-1
-ssh-copy-id -i ~/.ssh/id_rsa.pub vagrant@node-2
+ssh-copy-id -i ~/.ssh/id_rsa.pub vagrant@node-1 # type 'vagrant' as passwd
+ssh-copy-id -i ~/.ssh/id_rsa.pub vagrant@node-2 # type 'vagrant' as passwd
 ```
