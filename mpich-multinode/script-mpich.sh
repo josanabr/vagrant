@@ -31,7 +31,7 @@ compile_mpich() {
 #
 if [ ! -f ${MPICH_FILE} ]; then
   echo -n "Descargando mpich file... "
-  wget ${DOWNLOAD_SITE} -P /vagrant > /dev/null && echo "descargado"
+  wget ${DOWNLOAD_SITE} -P /vagrant >& /dev/null && echo "descargado"
 fi
 #
 # Descomprime archivo mpich y compila. Esto lo hara la maquina "maestro"
