@@ -6,7 +6,7 @@ Para crear tres máquinas con MPICH desplegado en ellas debe ejecutar el comando
 vagrant up
 ```
 
-Finalmente debe ejecutar los siguientes dos pasos.
+Finalmente debe ejecutar los siguientes dos pasos en el nodo maestro, `vagrant ssh master`
 
 * [Acceso passwordless](#acceso-passwordless)
 * [Probando MPI Cluster](#probando-mpi-cluster)
