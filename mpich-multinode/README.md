@@ -79,7 +79,7 @@ Repetir los comandos anteriores en el `node-2`.
 
 En cada una de las máquinas, `master` `node-1` `node-2`, ejecutar el siguiente paso.
 
-Modificar el archivo `/etc/sshd_config`:
+Modificar el archivo `/etc/ssh/sshd_config`:
 
 * En la línea `PermitRootLogin prohibit-password` cambiar a `PermitRootLogin yes`.
 * En la línea `PasswordAuthentication no` cambiar a `PasswordAuthentication yes`. 
