@@ -1,6 +1,11 @@
 # MPICH Multi-nodo
 
-Para crear tres máquinas con MPICH desplegado en ellas debe ejecutar el comando 
+**Asegúrese de descargar todos los archivos que se encuentran en este directorio.**
+![](../figs/mpich-multinode-files.png)
+
+---
+Ubíquese en el directorio donde descargó los archivos anteriormente indicados para crear tres máquinas con MPICH desplegado en ellas.
+Ubicado en el directorio ejecutar el comando:
 
 ```
 vagrant up
@@ -22,7 +27,7 @@ ssh-copy-id -i ~/.ssh/id_rsa.pub vagrant@node-mpi-2 # type 'vagrant' as passwd
 
 ## Probando MPI Cluster
 
-Asuma el programa `mpidemo.c` es como sigue:
+Estando dentro de la máquina `master` vaya al directorio `/vagrant`. Asuma el programa `mpidemo.c` es como sigue:
 
 ```
 #include <stdio.h>
