@@ -2,10 +2,15 @@
 #
 # Descargar mpich. 
 # Definicion del sitio de descarga
+#
+# Author: John Sanabria
+# Date: 2020-03-19
+#
 DOWNLOAD_SITE="http://www.mpich.org/static/downloads/3.3.2/mpich-3.3.2.tar.gz"
 MPICH_FILE="/vagrant/mpich-3.3.2.tar.gz"
 MPICH_DIR="/vagrant/mpich-3.3.2"
 CWD=$(pwd)
+PREFIX_DIR="/usr/local"
 #
 # Funciones auxiliares
 #
@@ -19,10 +24,14 @@ install_build_tools() {
 compile_mpich() {
   install_build_tools
   cd ${MPICH_DIR}
-  echo -n "Compilando MPICH... "
-  ./configure --disable-fortran --prefix=/usr/local > /dev/null
-  make > /dev/null
-  echo " compilado"
+  if [ -f config.system ]; then
+    echo "Software ya configurado... probablemente compilado"
+  else
+    echo -n "Compilando MPICH... "
+    ./configure --disable-fortran --prefix=${PREFIX_DIR} > /dev/null
+    make > /dev/null
+    echo " compilado"
+  fi
 }
 #
 # INICIO DE SCRIPT
@@ -43,7 +52,11 @@ if [ ! -d ${MPICH_DIR} ]; then
   compile_mpich
 fi
 install_build_tools
-echo "Instalando MPICH"
-cd ${MPICH_DIR}
-sudo make install
+if [ -f ${PREFIX_DIR}/bin/mpicc ]; then
+  echo "Software ya instalado"
+else
+  echo "Instalando MPICH"
+  cd ${MPICH_DIR}
+  sudo make install
+fi
 cd ${CWD}
