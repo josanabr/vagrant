@@ -13,7 +13,7 @@ Finalmente debe ejecutar los siguientes dos pasos en el nodo maestro, `vagrant s
 
 ## Acceso passwordless
 
-En el nodo maestro ejecutar los siguientes comandos
+Copiar la llave pública a los nodos de procesamiento
 
 ```
 ssh-copy-id -i ~/.ssh/id_rsa.pub vagrant@node-mpi-1 # type 'vagrant' as passwd
@@ -22,7 +22,7 @@ ssh-copy-id -i ~/.ssh/id_rsa.pub vagrant@node-mpi-2 # type 'vagrant' as passwd
 
 ## Probando MPI Cluster
 
-Asuma el programa `mpidemo.c`:
+Asuma el programa `mpidemo.c` es como sigue:
 
 ```
 #include <stdio.h>
@@ -44,7 +44,7 @@ int main(){
 }
 ```
 
-Compile el programa como sigue:
+Compile el programa:
 
 ```
 mpicc mpidemo.c -o /shared/mpidemo
@@ -65,7 +65,7 @@ mpirun -n 4 -f hosts4run /shared/mpidemo
 
 ---
 
-* Mas detalles de la configuración de NFS y habilitar el accesso *passworless* se puede encontrar en [este documento](https://docs.google.com/document/d/1IgQXv81USdHU4lRUsbXPN017BAPUXdqi5t9BUa6yXF8/edit?usp=sharing).
+Para mas detalles de la configuración de NFS y habilitar el accesso *passworless* visitar [este documento](https://docs.google.com/document/d/1IgQXv81USdHU4lRUsbXPN017BAPUXdqi5t9BUa6yXF8/edit?usp=sharing).
 
 ---
 
