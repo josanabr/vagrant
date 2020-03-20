@@ -65,7 +65,7 @@ mpirun -n 4 -f hosts4run /shared/mpidemo
 
 ---
 
-* Un documento detallado de la configuración de NFS y habilitar el accesso *passworless* se puede encontrar en [este documento](https://docs.google.com/document/d/1IgQXv81USdHU4lRUsbXPN017BAPUXdqi5t9BUa6yXF8/edit?usp=sharing).
+* Mas detalles de la configuración de NFS y habilitar el accesso *passworless* se puede encontrar en [este documento](https://docs.google.com/document/d/1IgQXv81USdHU4lRUsbXPN017BAPUXdqi5t9BUa6yXF8/edit?usp=sharing).
 
 ---
 
