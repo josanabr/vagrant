@@ -11,18 +11,6 @@ Finalmente debe ejecutar los siguientes dos pasos en el nodo maestro, `vagrant s
 * [Acceso passwordless](#acceso-passwordless)
 * [Probando MPI Cluster](#probando-mpi-cluster)
 
-Un documento detallado de los próximos pasos los puede encontrar en [este documento](https://docs.google.com/document/d/1IgQXv81USdHU4lRUsbXPN017BAPUXdqi5t9BUa6yXF8/edit?usp=sharing).
-
-El levantar las tres máquinas virtuales duró alrededor de **40 minutos** en una máquina con la siguiente configuración:
-
-* Intel Core i7
-* 16 GB en RAM
-
-Software
-
-* Vagrant - 2.2.6
-* VirtualBox - 6.0.14
-
 ## Acceso passwordless
 
 En el nodo maestro ejecutar los siguientes comandos
@@ -74,3 +62,19 @@ Para ejecutar su programa debe ejecutar la siguiente línea:
 ```
 mpirun -n 4 -f hosts4run /shared/mpidemo
 ```
+
+---
+
+* Un documento detallado de la configuración de NFS y habilitar el accesso *passworless* se puede encontrar en [este documento](https://docs.google.com/document/d/1IgQXv81USdHU4lRUsbXPN017BAPUXdqi5t9BUa6yXF8/edit?usp=sharing).
+
+---
+
+El levantar las tres máquinas virtuales duró alrededor de **40 minutos** en una máquina con la siguiente configuración:
+
+* Intel Core i7
+* 16 GB en RAM
+
+Software
+
+* Vagrant - 2.2.6
+* VirtualBox - 6.0.14
