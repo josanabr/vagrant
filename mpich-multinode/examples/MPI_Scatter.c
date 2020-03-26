@@ -7,7 +7,7 @@
  
 #define MAXVECT 10
 #define MAXPROC 5
-#define imprimirvector(v,n) printf("Mi vista (%d) del vector\n",myrank); for (i = 0 ; i < n; i++) printf("[%d: %d] ",myrank,v[i]);
+#define imprimirvector(v,n) printf("Mi vista (%d) del vector\n",myrank); for (i = 0 ; i < n; i++) printf("[%d: %d] ",myrank,v[i]); printf("\n");
 
 int main(int argc, char *argv[])
 {
@@ -23,7 +23,6 @@ int main(int argc, char *argv[])
     int choosen = (rand()%MAXPROC); 
     rec_vector = (int*) malloc(sizeof(int) * MAXVECT/MAXPROC);
     root = 0;
-    printf("choosen %d\n", choosen);
     // Escriba las lineas que permitan:
     //  (1) Inicializar el dominio MPI
     //  (2) Guardar en la variable 'worldsize' el numero de procesos 
